@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { projectStorage } from "../firebase/config";
 
 const useStorage = (file) => {
-  [progress, setProgress] = useState(0);
-  [error, setError] = useState(null)[(url, setUrl)] = useState(null);
+  const [progress, setProgress] = useState(0);
+  const [error, setError] = useState(null);
+  const [url, setUrl] = useState(null);
 
   useEffect(() => {
     const storageRef = projectStorage.ref(file.name);
